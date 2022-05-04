@@ -15,8 +15,8 @@ class Worker
          if ($this -> checkAge($a)) {
                      $this -> age = $a;
          }
- else 
- {return $a;}
+        else 
+        {return $a;}
 
     }
     public function getAge() {
