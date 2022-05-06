@@ -1,14 +1,13 @@
 <!DOCTYPE html>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php if (!$posts):?>
+        <?php if(!$posts):?>
             <p>Объявлений пока нет.</p>
         <?php else:?>
-            <?php foreach ($posts as $post):?>
+            <?php foreach($posts as $post):?>
                 <article>
-                    <h2><?=htmlspecialchars($post->title) ?></h2>
-                    <div class="body"><?=htmlspecialchars($post->text)?></div>
-                    <p>Телефон: <?=htmlspecialchars($post-> phoneNumber)?></p>
+                    <h2><?=htmlspecialchars($post -> title)?></h2>
+                    <div class="body"><?=htmlspecialchars($post -> text)?></div>
+                    <p>Телефон: <?=htmlspecialchars($post -> phoneNumber)?></p>
                 </article>
             <?php endforeach?>
         <?php endif?>

@@ -2,7 +2,7 @@
 class PostService
 {
     private $posts = [];
-    public function _construct()
+    public function __construct()
     {
         $this-> posts[] = $this -> createPost(
                 'Продам слона',
@@ -19,8 +19,8 @@ class PostService
       private function createPost($title, $phoneNumber, $text)
       {
           $c = new Post;
-          $c-> title = $title;
-          $c-> phoneNumber = $phoneNumber;
+          $c -> title = $title;
+          $c -> phoneNumber = $phoneNumber;
           $c -> text = $text;
           return $c;
       }
@@ -30,7 +30,7 @@ class PostService
       }
       public function deletePost(Post $post)
       {
-          $key = array_serch($this->posts, $post, true);
+          $key = array_serch($this -> posts, $post, true);
           if ($key === null)
           {
               throw new \Exception("Post is not in list, cannot delete");
@@ -39,9 +39,10 @@ class PostService
       }
       public function addPost(Post $post)
       {
-          if (null !== array_serch($this->posts,$post,true)) {
+          if (null !== array_serch($this -> posts,$post,true)) {
               throw new Exception("Post already added");
           }
-          $this->posts[] = $post;
+          $this -> posts[] = $post;
       }
 }
+?>
