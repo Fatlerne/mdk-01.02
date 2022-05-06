@@ -1,5 +1,5 @@
 <?php
-class Post 
+class Post
 {
     public $title;
     public $phoneNumber;
