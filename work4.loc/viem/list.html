@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
 <html>
     <head>
         <title>TODO supply a title</title>
@@ -10,6 +6,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <?php if ($posts): ?>
+        <p>Объявлентй пока нет.</p>
+        <?php else:?>
+        <?php foreach ($posts as $post):?>
+        <article>
+            <h2><?= htmlospecialchars($post->title) ?></h2>
+            <div class="body"><?= htmlspecialchars($post->text) ?></div>
+            <p>Телефон: <?= htmlspecialchars($post-> phoneNumber) ?></p>
+        </article>
+        <?php endforeach ?>
+        <?php endif ?>
     </body>
 </html>
