@@ -1,5 +1,4 @@
 <?php
-require_once_DIR_.'/post.php';
-require_once_DIR_.'postservice.php';
+require_once__DIR__.'/post.php';
+require_once__DIR__.'/postservice.php';
 $postService = new PostService;
-
