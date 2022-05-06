@@ -1,5 +1,5 @@
 <?php
-require_DIR_.'/../bootstrap.php';
+require__DIR__.'/../bootstrap.php';
 $posts = $postService->getAllPosts();
-require_DIR_.'/../viem/list.html';
+require__DIR__.'/../view/list.phtml';
 
